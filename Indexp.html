@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>botak Asw Kerja Bagus</title>
+  <style>
+    *{
+      margin: 15px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+      background: #5A5A5A;
+    }
+    
+    .btn{
+      width: 350px;
+      height: 250px;
+      background: #DEDEDE;
+      margin: 100px 20px;
+      border-radius: 18px;
+      font-size: 35px;
+    }
+    
+    .btn.active{
+      font-size: 20px;
+    }
+    
+  </style>
+  </head>
+  <body>
+    <center>
+    <h2>Botak Kerja Bagus</h2>
+    <img src="2.png" height="200px" width="200px" id="img-botakasw">
+    <h2 id="clicks">score: 0</h2>
+    <button onclick="plus()"class="btn">Kerja Bagus!</button>
+    </center>
+    <h3>@hannzaa</h3>
+  </body>
+  <script>
+    let clicks = 0 ;
+    function plus(){
+      const audio = new Audio("./kerjabagus.mp3")
+      audio.play()
+      clicks += 1
+      document.getElementById("clicks").innerHTML = "Score : " + clicks
+      document.getElementById("img-botakasw").src = "./Botak.jpg"
+      audio.addEventListener("ended", function(){
+        document.getElementById("img-botakasw").src = "./2.png"
+      })
+    }
+  </script>
